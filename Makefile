@@ -3,7 +3,7 @@ VERSION=1.0.0
 all: fmt  release
 
 release:  release-deps 
-	gox -ldflags "-X main.version=${VERSION}" -output="build/{{.Dir}}_{{.OS}}_{{.Arch}}" .
+	gox -output="build/{{.Dir}}_{{.OS}}_{{.Arch}}" .
 
 fmt:
 	go fmt ./...
